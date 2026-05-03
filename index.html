@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>测试标题 - 多页面切换</title>
     <style>
-        /* ==================== 全局基础样式（可更改） ==================== */
+        /* ==================== 全局基础样式（黑蓝色主题，可更改） ==================== */
         :root {
             --bg-primary: #0a0a0f;
             --bg-secondary: #0d0d1a;
@@ -79,13 +79,27 @@
         }
 
         @keyframes bgGlowPulse {
-            0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
-            50% { opacity: 1; transform: translateX(-50%) scale(1.15); }
+            0%,
+            100% {
+                opacity: 0.7;
+                transform: translateX(-50%) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(-50%) scale(1.15);
+            }
         }
 
         @keyframes bgGlowPulse2 {
-            0%, 100% { opacity: 0.5; transform: scale(1); }
-            50% { opacity: 0.85; transform: scale(1.2); }
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.85;
+                transform: scale(1.2);
+            }
         }
 
         .main-container {
@@ -122,7 +136,10 @@
         }
 
         @keyframes navSlideDown {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .nav-btn {
@@ -164,7 +181,9 @@
             text-shadow: 0 0 20px rgba(147, 197, 253, 0.5);
         }
 
-        .nav-btn:hover::before { width: 100%; }
+        .nav-btn:hover::before {
+            width: 100%;
+        }
 
         .nav-btn:active {
             transform: translateY(0px) scale(0.96);
@@ -197,11 +216,19 @@
             animation: pageFadeIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
         }
 
-        .page-content.active-page { display: block; }
+        .page-content.active-page {
+            display: block;
+        }
 
         @keyframes pageFadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .page-content h2 {
@@ -211,6 +238,7 @@
             margin-bottom: 16px;
             letter-spacing: 1px;
             filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
+            text-align: center;
         }
 
         .page-content p {
@@ -219,6 +247,7 @@
             line-height: 1.7;
             max-width: 600px;
             margin: 0 auto;
+            text-align: center;
         }
 
         .placeholder-card {
@@ -247,6 +276,7 @@
             font-size: 14px;
             color: var(--text-secondary);
             max-width: 100%;
+            text-align: left;
         }
 
         .hero-section {
@@ -272,16 +302,20 @@
         }
 
         @keyframes titleFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-6px);
+            }
         }
 
-        /* 👇 标题下方描述文字（与下载按钮的间距在此调整） */
         .hero-subtitle {
             font-size: 17px;
             color: var(--text-secondary);
             letter-spacing: 1px;
-            margin-bottom: 100px;  /* 已增大间距：原为40px，现改为60px（可更改） */
+            margin-bottom: 60px;
             max-width: 500px;
             line-height: 1.6;
         }
@@ -308,12 +342,17 @@
         }
 
         @keyframes glowRingPulse {
-            0%, 100% {
-                width: 105%; height: 105%; opacity: 0.5;
+            0%,
+            100% {
+                width: 105%;
+                height: 105%;
+                opacity: 0.5;
                 border-color: rgba(59, 130, 246, 0.4);
             }
             50% {
-                width: 125%; height: 125%; opacity: 0;
+                width: 125%;
+                height: 125%;
+                opacity: 0;
                 border-color: rgba(96, 165, 250, 0.7);
             }
         }
@@ -360,8 +399,13 @@
         }
 
         @keyframes btnBreathe {
-            0%, 100% { box-shadow: 0 6px 24px rgba(37, 99, 235, 0.45), 0 0 60px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-            50% { box-shadow: 0 8px 32px rgba(37, 99, 235, 0.6), 0 0 80px rgba(59, 130, 246, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15); }
+            0%,
+            100% {
+                box-shadow: 0 6px 24px rgba(37, 99, 235, 0.45), 0 0 60px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+            50% {
+                box-shadow: 0 8px 32px rgba(37, 99, 235, 0.6), 0 0 80px rgba(59, 130, 246, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            }
         }
 
         .download-btn::before {
@@ -378,7 +422,9 @@
             pointer-events: none;
         }
 
-        .download-btn:hover::before { left: 120%; }
+        .download-btn:hover::before {
+            left: 120%;
+        }
 
         .download-btn:hover {
             background: linear-gradient(135deg, var(--download-btn-hover-bg1) 0%, var(--download-btn-hover-bg2) 100%);
@@ -398,8 +444,138 @@
             transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.2);
         }
 
-        .download-btn:hover .download-icon { transform: translateY(3px); }
+        .download-btn:hover .download-icon {
+            transform: translateY(3px);
+        }
 
+        /* ==================== 密码模态框样式（可更改） ==================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: var(--nav-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 32px 28px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(59, 130, 246, 0.3);
+            text-align: center;
+            animation: modalSlideIn 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .modal-card h3 {
+            font-size: 22px;
+            color: var(--text-heading);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .modal-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .modal-input {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+            margin-bottom: 12px;
+        }
+
+        .modal-input:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .modal-error {
+            color: #f87171;
+            font-size: 13px;
+            min-height: 20px;
+            margin-bottom: 8px;
+            transition: opacity 0.3s;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .modal-btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .modal-btn.confirm {
+            background: linear-gradient(135deg, var(--accent-blue), #1d4ed8);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.5);
+        }
+
+        .modal-btn.confirm:hover {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.7);
+        }
+
+        .modal-btn.cancel {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-btn.cancel:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        /* ==================== 粒子效果 ==================== */
         .particles-container {
             position: fixed;
             top: 0;
@@ -420,10 +596,20 @@
         }
 
         @keyframes particleFloat {
-            0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10vh) translateX(40px) scale(1.2); opacity: 0; }
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(40px) scale(1.2);
+                opacity: 0;
+            }
         }
 
         /* ==================== 响应式设计 ==================== */
@@ -434,64 +620,104 @@
                 border-radius: 40px;
                 margin-top: 16px;
             }
-
             .nav-btn {
                 padding: 8px 14px;
                 font-size: 13px;
                 border-radius: 25px;
             }
-
-            .nav-btn::before { border-radius: 25px; }
-
+            .nav-btn::before {
+                border-radius: 25px;
+            }
             .page-content {
                 margin-top: 24px;
                 padding: 28px 18px;
                 border-radius: 24px;
             }
-
-            .page-content h2 { font-size: 28px; }
-
+            .page-content h2 {
+                font-size: 28px;
+            }
             .hero-title {
                 font-size: 34px;
                 letter-spacing: 1px;
             }
-
             .hero-subtitle {
                 font-size: 15px;
-                margin-bottom: 45px;  /* 移动端间距同步增大：原为30px，现改为45px（可更改） */
+                margin-bottom: 45px;
                 padding: 0 16px;
             }
-
             .download-btn {
                 padding: 14px 36px;
                 font-size: 16px;
                 letter-spacing: 1.5px;
             }
-
             .download-btn-wrapper::before,
-            .download-btn-wrapper::after { border-radius: 45px; }
-
-            body::before { width: 350px; height: 350px; top: -20%; }
-            body::after { width: 250px; height: 250px; bottom: -15%; right: -20%; }
+            .download-btn-wrapper::after {
+                border-radius: 45px;
+            }
+            body::before {
+                width: 350px;
+                height: 350px;
+                top: -20%;
+            }
+            body::after {
+                width: 250px;
+                height: 250px;
+                bottom: -15%;
+                right: -20%;
+            }
+            .modal-card {
+                padding: 24px 20px;
+            }
         }
 
         @media (max-width: 400px) {
-            .nav-btn { padding: 7px 10px; font-size: 12px; }
-            .hero-title { font-size: 28px; }
-            .page-content h2 { font-size: 24px; }
-            .download-btn { padding: 12px 28px; font-size: 15px; letter-spacing: 1px; }
-            .navbar { gap: 2px; padding: 8px 8px; border-radius: 30px; }
-            .page-content { padding: 20px 14px; }
-            .hero-subtitle { margin-bottom: 40px; } /* 小屏手机可保持稍大间距或进一步调整（可更改） */
+            .nav-btn {
+                padding: 7px 10px;
+                font-size: 12px;
+            }
+            .hero-title {
+                font-size: 28px;
+            }
+            .page-content h2 {
+                font-size: 24px;
+            }
+            .download-btn {
+                padding: 12px 28px;
+                font-size: 15px;
+                letter-spacing: 1px;
+            }
+            .navbar {
+                gap: 2px;
+                padding: 8px 8px;
+                border-radius: 30px;
+            }
+            .page-content {
+                padding: 20px 14px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- 粒子装饰容器 -->
     <div class="particles-container" id="particlesContainer"></div>
 
-    <div class="main-container">
+    <!-- 密码验证模态框 -->
+    <div class="modal-overlay" id="passwordModal">
+        <div class="modal-card">
+            <h3>🔒 请输入下载密码</h3>
+            <p>此资源需要密码才能下载</p>
+            <input type="password" class="modal-input" id="passwordInput" placeholder="请输入密码" autocomplete="off">
+            <div class="modal-error" id="modalError"></div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" id="cancelBtn">取消</button>
+                <button class="modal-btn confirm" id="confirmBtn">确认下载</button>
+            </div>
+        </div>
+    </div>
 
+    <!-- 主内容容器 -->
+    <div class="main-container">
         <nav class="navbar" aria-label="主导航">
             <button class="nav-btn active" data-nav="1" aria-current="page">按钮1</button>
             <button class="nav-btn" data-nav="2">按钮2</button>
@@ -499,6 +725,7 @@
             <button class="nav-btn" data-nav="4">按钮4</button>
         </nav>
 
+        <!-- 页面1：下载页面 -->
         <section class="page-content active-page" id="page1" aria-label="下载页面">
             <div class="hero-section">
                 <h1 class="hero-title">测试标题</h1>
@@ -517,6 +744,7 @@
             </div>
         </section>
 
+        <!-- 页面2 -->
         <section class="page-content" id="page2" aria-label="功能页面">
             <h2>🚀 功能介绍</h2>
             <p>这里可以放置产品功能、服务介绍或任何相关内容。</p>
@@ -530,6 +758,7 @@
             </div>
         </section>
 
+        <!-- 页面3 -->
         <section class="page-content" id="page3" aria-label="关于我们">
             <h2>📖 关于我们</h2>
             <p>我们是一支充满激情的团队，致力于创造卓越的数字体验。</p>
@@ -543,6 +772,7 @@
             </div>
         </section>
 
+        <!-- 页面4 -->
         <section class="page-content" id="page4" aria-label="帮助支持">
             <h2>❓ 帮助与支持</h2>
             <p>常见问题与解答，帮助您快速上手。</p>
@@ -559,47 +789,38 @@
 
     <script>
         (function() {
+            // ==================== 可修改配置 ====================
+            const CORRECT_PASSWORD = '567893'; // 下载密码（可更改）
+            const DOWNLOAD_URL = 'https://d2heb3d66e98ln.cloudfront.net'; // 下载后跳转的链接（可更改）
+
+            // ==================== 粒子生成 ====================
             const PARTICLE_COUNT = 35;
-            const PARTICLE_MIN_DURATION = 8;
-            const PARTICLE_MAX_DURATION = 18;
-            const PARTICLE_MIN_SIZE = 1.5;
-            const PARTICLE_MAX_SIZE = 3.5;
-            const PARTICLE_COLOR = 'rgba(147, 197, 253, 0.55)';
-
             const particlesContainer = document.getElementById('particlesContainer');
-
-            function createParticle() {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                const leftPos = Math.random() * 100;
-                const size = PARTICLE_MIN_SIZE + Math.random() * (PARTICLE_MAX_SIZE - PARTICLE_MIN_SIZE);
-                const duration = PARTICLE_MIN_DURATION + Math.random() * (PARTICLE_MAX_DURATION - PARTICLE_MIN_DURATION);
-                const delay = Math.random() * PARTICLE_MAX_DURATION;
-                particle.style.left = leftPos + '%';
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.background = PARTICLE_COLOR;
-                particle.style.animationDuration = duration + 's';
-                particle.style.animationDelay = -delay + 's';
-                particle.style.opacity = (0.3 + Math.random() * 0.5);
-                return particle;
-            }
-
             for (let i = 0; i < PARTICLE_COUNT; i++) {
-                particlesContainer.appendChild(createParticle());
+                const p = document.createElement('div');
+                p.classList.add('particle');
+                p.style.left = Math.random() * 100 + '%';
+                const size = 1.5 + Math.random() * 2;
+                p.style.width = size + 'px';
+                p.style.height = size + 'px';
+                p.style.animationDuration = (8 + Math.random() * 10) + 's';
+                p.style.animationDelay = -(Math.random() * 18) + 's';
+                p.style.opacity = 0.3 + Math.random() * 0.5;
+                particlesContainer.appendChild(p);
             }
 
+            // ==================== 页面切换 ====================
             const navButtons = document.querySelectorAll('.nav-btn');
             const pageContents = document.querySelectorAll('.page-content');
 
             function switchPage(pageId) {
-                pageContents.forEach(page => page.classList.remove('active-page'));
-                const targetPage = document.getElementById(pageId);
-                if (targetPage) {
-                    targetPage.classList.add('active-page');
-                    targetPage.style.animation = 'none';
-                    targetPage.offsetHeight;
-                    targetPage.style.animation = '';
+                pageContents.forEach(p => p.classList.remove('active-page'));
+                const target = document.getElementById(pageId);
+                if (target) {
+                    target.classList.add('active-page');
+                    target.style.animation = 'none';
+                    target.offsetHeight;
+                    target.style.animation = '';
                 }
             }
 
@@ -607,11 +828,8 @@
                 btn.addEventListener('click', function() {
                     navButtons.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
-                    const navId = this.getAttribute('data-nav');
-                    const pageId = 'page' + navId;
-                    switchPage(pageId);
+                    switchPage('page' + this.getAttribute('data-nav'));
                 });
-
                 btn.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
@@ -620,27 +838,94 @@
                 });
             });
 
-            // 👇 方案二：跳转链接（请替换为您的真实下载地址）
-            const DOWNLOAD_URL = 'https://example.com/your-download-file.zip';
-            const downloadBtn = document.getElementById('downloadBtn');
-            if (downloadBtn) {
-                downloadBtn.addEventListener('click', function(e) {
-                    this.style.transform = 'scale(0.92)';
-                    this.style.transition = 'transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1.2)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                        this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2)';
-                    }, 150);
-                    setTimeout(() => {
-                        window.location.href = DOWNLOAD_URL;
-                    }, 200);
-                });
+            // ==================== 密码模态框逻辑 ====================
+            const modalOverlay = document.getElementById('passwordModal');
+            const passwordInput = document.getElementById('passwordInput');
+            const modalError = document.getElementById('modalError');
+            const confirmBtn = document.getElementById('confirmBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+
+            function showModal() {
+                modalOverlay.classList.add('active');
+                passwordInput.value = '';
+                modalError.textContent = '';
+                passwordInput.focus();
             }
 
+            function hideModal() {
+                modalOverlay.classList.remove('active');
+            }
+
+            // 执行下载与跳转（原方案一 + 跳转链接）
+            function executeDownload() {
+                // 按钮动画
+                const btn = document.getElementById('downloadBtn');
+                if (btn) {
+                    btn.style.transform = 'scale(0.92)';
+                    btn.style.transition = 'transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1.2)';
+                    setTimeout(() => {
+                        btn.style.transform = '';
+                        btn.style.transition = 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2)';
+                    }, 150);
+                }
+
+                // 方案一：创建文件并下载
+                const fileName = '测试文件.txt';
+                const fileContent = '这是一个测试下载文件。\n感谢您的下载！\n文件创建时间：' + new Date().toLocaleString();
+                const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = fileName;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                // 延迟跳转
+                setTimeout(() => {
+                    window.location.href = DOWNLOAD_URL;
+                }, 600);
+            }
+
+            // 确认按钮：验证密码
+            confirmBtn.addEventListener('click', () => {
+                const entered = passwordInput.value.trim();
+                if (entered === CORRECT_PASSWORD) {
+                    hideModal();
+                    executeDownload();
+                } else {
+                    modalError.textContent = '密码错误，请重新输入';
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                }
+            });
+
+            // 取消按钮
+            cancelBtn.addEventListener('click', hideModal);
+
+            // 点击遮罩关闭（可选）
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) hideModal();
+            });
+
+            // 回车键提交
+            passwordInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    confirmBtn.click();
+                }
+            });
+
+            // ==================== 下载按钮触发弹窗 ====================
+            const downloadBtn = document.getElementById('downloadBtn');
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', showModal);
+            }
+
+            // ==================== 键盘快捷键 ====================
             document.addEventListener('keydown', function(e) {
                 const keyNum = parseInt(e.key);
-                if (keyNum >= 1 && keyNum <= 4 && !e.ctrlKey && !e.metaKey && !e.altKey &&
-                    document.activeElement === document.body) {
+                if (keyNum >= 1 && keyNum <= 4 && !e.ctrlKey && !e.metaKey && document.activeElement === document.body) {
                     navButtons.forEach(b => b.classList.remove('active'));
                     const targetBtn = document.querySelector(`.nav-btn[data-nav="${keyNum}"]`);
                     if (targetBtn) {
@@ -648,12 +933,12 @@
                         switchPage('page' + keyNum);
                     }
                 }
-                if (e.key === 'd' && !e.ctrlKey && !e.metaKey && !e.altKey &&
-                    document.activeElement === document.body) {
+                // 快捷键D触发下载（仅在页面1可见时）
+                if (e.key === 'd' && !e.ctrlKey && !e.metaKey && document.activeElement === document.body) {
                     const page1 = document.getElementById('page1');
                     if (page1 && page1.classList.contains('active-page')) {
                         e.preventDefault();
-                        if (downloadBtn) downloadBtn.click();
+                        showModal();
                     }
                 }
             });
